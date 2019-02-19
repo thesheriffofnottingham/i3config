@@ -17,7 +17,7 @@ font pango:Monospace 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:Monospace 10
+font pango:Monospace 10
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -193,10 +193,13 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 bindsym $mod+Shift+x exec i3lock --color "$bg-color"
 
 # wallpaper
-exec_always feh --bg-fill /home/gaston/Desktop/images/wallpaper/video_games/spyro/1544319419331.jpg
+exec_always feh --bg-fill /home/gaston/Desktop/images/wallpaper/1544795700906.png
 
 # display-compositor
 #exec_always compton -f
 
 # screenshot
 bindsym Print exec scrot 'Screenshot_%Y%m-%d.png' -e 'mv $f /home/gaston/Desktop'
+
+# open ranger
+bindsym XF86Search exec xfce4-terminal -e ranger
