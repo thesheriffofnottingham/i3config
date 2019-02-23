@@ -181,25 +181,31 @@ bar {
 }
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +10% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -10% #decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # i3lock
-bindsym $mod+Shift+x exec i3lock --color "$bg-color"
+bindsym $mod+Shift+x exec i3lock --color "$black-color"
 
 # wallpaper
 exec_always feh --bg-fill /home/gaston/Desktop/images/wallpaper/1544795700906.png
 
 # display-compositor
-#exec_always compton -f
+#exec_always compton 
 
 # screenshot
-bindsym Print exec scrot 'Screenshot_%Y%m-%d.png' -e 'mv $f /home/gaston/Desktop'
+bindsym Print exec scrot 'Screenshot_%Y-%m-%d.png' -e 'mv $f /home/gaston/Desktop'
 
 # open ranger
 bindsym XF86Search exec xfce4-terminal -e ranger
+
+# open htop
+bindsym XF86LaunchA exec xfce4-terminal -e htop
+
+# power off
+#bindsym $mod+End exec xfce4-terminal -e sudo poweroff
